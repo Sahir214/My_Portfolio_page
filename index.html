@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Portfolio</title>
+	<!---custom css link---->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	 <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+	<!----header design--->
+	<header>
+		<a href="#" class="logo">Dev<span>lop</span>er.</a>
+
+		<ul class="navlist">
+			<li><a href="#home" class="active">Home</a></li>
+			<li><a href="#about">About Me</a></li>
+			<!-- <li><a href="#services">Services</a></li> -->
+			<!-- <li><a href="#portfolio">Portfolio</a></li> -->
+			<li><a href="#contact">Contact Me</a></li>
+		</ul>
+
+		<div class="bx bx-menu" id="menu-icon">
+			
+		</div>
+	</header>
+
+	<!----home section design--->
+	<section class="home" id="home">
+		<div class="home-text">
+			<div class="slide">
+				<span class="one">Hello</span>
+				<span class="two">I'm</span>
+			</div>
+			<h1>Sahil Kasekar</h1>
+			<h3><span> Frontend Developer</span></h3>
+			<p>Looking to deliver excellent web development skills in Web services, <br>And as beginner exploring myself more into the Web world. </p>
+			<div class="button">
+				<a href="#" class="btn">Say Hello</a>
+				<a href="#" class="btn2"><span><i class='bx bx-play'></i></span>Watch My Work</a>
+			</div>
+		</div>
+	</section>
+
+	<!----about section design--->
+	<section class="about" id="about">
+		<div class="about-img">
+			<img src="img/about.jpeg">
+		</div>
+
+		<div class="about-text">
+			<h2>About <span>Me</span></h2>
+			<h4>Creative Frontend Developer!</h4>
+			<p>Pursuing BTech in ELectronics & Communication from Shri Ramdeobaba College of Engineering. Experienced in HTML, CSS, JavaScript & Python.Building my skills towards Web Development & looking for oportunities in web World and IT zone.</p>
+			<a href="#" class="btn">More About</a>
+		</div>
+	</section>
+
+	
+
+	<!----contact section design--->
+	<section class="contact" id="contact">
+		<div class="contact-text">
+			<h2>Contact <span>Me!</span></h2>
+			<h4>If You Have Any Project In Your Mind.</h4>
+			<p>I'm a UI/UX Designer - Love to create it For you with my full of knowledge.</p>
+			<div class="list">
+				<li><a href="#">8208930087</a></li>
+				<li><a href="#">sahilkasekar214@gmail.com</a></li>
+				
+			</div>
+
+			<div class="contact-icons">
+				<a href="#"><i class='bx bxl-facebook' ></i></a>
+				<a href="#"><i class='bx bxl-instagram' ></i></a>
+				<a href="https://www.linkedin.com/in/sahil-kasekar-6a4507205" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+				<a href="https://github.com/Sahir214" target="_blank"><i class='bx bxl-github' ></i></a>
+			</div>
+		</div>
+
+		<div class="contact-form">
+			<div id="touch">Get <span id="in"> IN</span> Touch</div>
+			<form name="submit-to-google-sheet" action="">
+				<input type="name" placeholder="Your Name" required>
+				<input type="email" placeholder="Your Email Address" required>
+				<input type="" placeholder="Your Mobile Number" required>
+				<textarea name="" id="" cols="35" rows="10" placeholder="How Can I Help You" required></textarea>
+				<input type="submit" value="Send Message" class="submit" required>
+			</form>
+		</div>
+	</section>
+
+	<!----end section design--->
+	<section class="end">
+		<div class="last-text">
+			<p>Copyright © 2022 by Sahil Kasekar All Rights Reserved.</p>
+		</div>
+
+		<div class="top">
+			<a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
+		</div>
+	</section>
+
+	<!---custom js link--->
+	<script type="text/javascript" src="js/script.js"></script>
+	<!-- google sheet -->
+	<script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbyqeytGBeZvYCRzAg_X9dkrGuG05glD5aAk_bJte1QD-rZ6oh_MSs_cM5ViXQGpxeMtfA/exec'
+		const form = document.forms['submit-to-google-sheet']	
+	  
+		form.addEventListener('submit', e => {
+		  e.preventDefault()
+		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			.then(response => console.log('Success!', response))
+			.catch(error => console.error('Error!', error.message))
+		})
+	  </script>
+
+</body>
+</html>
